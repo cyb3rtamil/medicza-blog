@@ -15,9 +15,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.background = '#fff';
                 navLinks.style.padding = '2rem';
                 navLinks.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+                navLinks.style.zIndex = '1000';
             }
         });
     }
+
+    // Image Error Handler (Fallback to Initials)
+    const rankerImages = document.querySelectorAll('.ranker-card img');
+    rankerImages.forEach(img => {
+        img.addEventListener('error', function () {
+            // Find the parent wrapper and the name
+            const wrapper = this.closest('.img-wrapper');
+            const name = this.alt.split(' - ')[0]; // Extract name from Alt (e.g. "Kaviya")
+            const initials = name.charAt(0);
+
+            // Hide broken image
+            this.style.display = 'none';
+
+            // Create fallback element
+            const fallback = document.createElement('div');
+            fallback.style.width = '100%';
+            fallback.style.height = '100%';
+            fallback.style.display = 'flex';
+            fallback.style.alignItems = 'center';
+            fallback.style.justifyContent = 'center';
+            fallback.style.backgroundColor = '#f3f4f6';
+            fallback.style.color = '#0B1B32';
+            fallback.style.fontSize = '2rem';
+            fallback.style.fontWeight = '700';
+            fallback.style.fontFamily = 'Montserrat, sans-serif';
+            fallback.innerText = initials;
+
+            wrapper.appendChild(fallback);
+        });
+    });
 
     // Smooth Scroll for Anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -28,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open
                 if (window.innerWidth <= 768) {
                     navLinks.style.display = 'none';
                 }
@@ -36,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Simple Intersection Observer for Fade-in effects
+    // Fade-in animations
     const observerOptions = {
         threshold: 0.1
     };
@@ -44,13 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.stat-card, .course-card, .feature-item').forEach(el => {
+    document.querySelectorAll('.stat-item, .ranker-card, .course-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
