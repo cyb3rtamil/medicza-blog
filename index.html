@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <div id="scroll-progress"></div>
 
     <!-- Navigation -->
     <nav class="navbar">
@@ -42,6 +43,17 @@
 
         <!-- Main Article Content -->
         <main class="blog-content">
+            <aside class="toc-container">
+                <div class="toc-header"><i class="fas fa-list-ul"></i> Table of Contents</div>
+                <ul class="toc-list">
+                    <li><a href="#hall-of-fame">Hall of Fame</a></li>
+                    <li><a href="#preparation">Preparation Strategy</a></li>
+                    <li><a href="#journey">The Journey</a></li>
+                    <li><a href="#why-telc">Why TELC Matters</a></li>
+                    <li><a href="#testimonials">Student Voices</a></li>
+                    <li><a href="#conclusion">Start Your Journey</a></li>
+                </ul>
+            </aside>
 
             <!-- Article Header -->
             <header class="article-header">
@@ -62,148 +74,218 @@
 
             <!-- Article Body -->
             <article class="article-body">
-                <p class="lead-text">
-                    It is a moment of immense pride for us at <strong>Medicza International Academy</strong>. We are
-                    thrilled to announce a historic milestone: <strong>29 of our dedicated students</strong> have
-                    successfully cleared the prestigious <strong>TELC German Language Exam</strong>.
-                </p>
+                <div id="intro">
+                    <p class="lead-text">
+                        It is a moment of immense pride for us at <strong>Medicza International Academy</strong>. We are
+                        thrilled to announce a historic milestone: <strong>29 of our dedicated students</strong> have
+                        successfully cleared the prestigious <strong>TELC German Language Exam</strong>.
+                    </p>
 
-                <p>
-                    The exam, held on <strong>January 17th</strong> at the <strong>Chennai TELC Centre</strong>, was a
-                    true test of proficiency, resilience, and preparation. For many of our students, this day marked the
-                    culmination of months of intensive training, late-night study sessions, and mock examinations.
-                </p>
+                    <p>
+                        The exam, held on <strong>January 17th</strong> at the <strong>Chennai TELC Centre</strong>, was
+                        a
+                        true test of proficiency, resilience, and preparation. For many of our students, this day marked
+                        the
+                        culmination of months of intensive training, late-night study sessions, and mock examinations.
+                    </p>
 
-                <p>
-                    This achievement is not just a statistic—it represents 29 individual dreams taking flight. From
-                    healthcare professionals aspiring to work in top German hospitals to engineers eyeing global careers
-                    in automotive and tech industries, these students have proven that with the right guidance, language
-                    barriers are meant to be broken.
-                </p>
+                    <p>
+                        This achievement is not just a statistic—it represents 29 individual dreams taking flight. From
+                        healthcare professionals aspiring to work in top German hospitals to engineers eyeing global
+                        careers
+                        in automotive and tech industries, these students have proven that with the right guidance,
+                        language
+                        barriers are meant to be broken.
+                    </p>
+                </div>
 
                 <hr class="divider">
 
-                <h3>Top Rankers: Leading the Way</h3>
-                <p>
-                    While every student's success is celebrated, we want to give a special shoutout to our top
-                    performers who secured the highest bands in the B1 TELC Exam. Their dedication to mastering the
-                    nuances of the German language has set a new benchmark for excellence.
-                </p>
+                <div id="hall-of-fame">
+                    <h3>Top Rankers: Leading the Way</h3>
+                    <p>
+                        While every student's success is celebrated, we want to give a special shoutout to our top
+                        performers who secured the highest bands in the B1 TELC Exam. Their dedication to mastering the
+                        nuances of the German language has set a new benchmark for excellence.
+                    </p>
 
-                <div class="achievement-box">
-                    <h4><i class="fas fa-crown"></i> Hall of Fame</h4>
-                    <div class="stats-grid rankers-grid">
-                        <!-- Rank 2 (Silver) - Displayed first for layout balance or order -->
-                        <div class="ranker-card rank-2">
-                            <div class="rank-badge silver">2nd</div>
-                            <div class="img-wrapper">
-                                <img src="gautham.jpg" alt="Gautham - 2nd Rank">
+                    <div class="achievement-box">
+                        <h4><i class="fas fa-crown"></i> Hall of Fame</h4>
+                        <div class="stats-grid rankers-grid">
+                            <!-- Rank 2 (Silver) -->
+                            <div class="ranker-card rank-2">
+                                <div class="rank-badge silver">2nd</div>
+                                <div class="img-wrapper">
+                                    <img src="gautham.jpg" alt="Gautham - 2nd Rank">
+                                </div>
+                                <h5>Gautham</h5>
+                                <small>Silver Medalist</small>
                             </div>
-                            <h5>Gautham</h5>
-                            <small>Silver Medalist</small>
-                        </div>
 
-                        <!-- Rank 1 (Gold) - Center and prominent -->
-                        <div class="ranker-card rank-1">
-                            <div class="rank-badge gold"><i class="fas fa-crown"></i> 1st</div>
-                            <div class="img-wrapper main-rank">
-                                <img src="kaviya.jpg" alt="Kaviya - 1st Rank">
+                            <!-- Rank 1 (Gold) -->
+                            <div class="ranker-card rank-1">
+                                <div class="rank-badge gold"><i class="fas fa-crown"></i> 1st</div>
+                                <div class="img-wrapper main-rank">
+                                    <img src="kaviya.jpg" alt="Kaviya - 1st Rank">
+                                </div>
+                                <h5>Kaviya</h5>
+                                <small>Gold Medalist</small>
                             </div>
-                            <h5>Kaviya</h5>
-                            <small>Gold Medalist</small>
-                        </div>
 
-                        <!-- Rank 3 (Bronze) -->
-                        <div class="ranker-card rank-3">
-                            <div class="rank-badge bronze">3rd</div>
-                            <div class="img-wrapper">
-                                <img src="subitha.jpg" alt="Subitha - 3rd Rank">
+                            <!-- Rank 3 (Bronze) -->
+                            <div class="ranker-card rank-3">
+                                <div class="rank-badge bronze">3rd</div>
+                                <div class="img-wrapper">
+                                    <img src="subitha.jpg" alt="Subitha - 3rd Rank">
+                                </div>
+                                <h5>Subitha</h5>
+                                <small>Bronze Medalist</small>
                             </div>
-                            <h5>Subitha</h5>
-                            <small>Bronze Medalist</small>
                         </div>
                     </div>
                 </div>
 
-                <h3>The Journey: From Coimbatore to Chennai</h3>
-                <p>
-                    Preparation for the TELC exam at Medicza is rigorous. Our B1 and B2 foundation courses are designed
-                    not just to pass an exam, but to instill deep cultural and linguistic competence.
-                </p>
-                <p>
-                    On the morning of January 17, our cohort travelled from Coimbatore to the Chennai TELC Centre,
-                    carrying with them the confidence instilled by our expert trainers. The results speak for
-                    themselves. A 100% commitment from the students met with our structured curriculum has yielded a
-                    phenomenal pass rate.
-                </p>
+                <div id="preparation">
+                    <h3>Behind the Scenes: The Preparation Strategy</h3>
+                    <p>
+                        How did 29 students manage to clear one of the toughest language proficiency exams in one go?
+                        The secret lies in our <strong>immersive learning approach</strong>.
+                    </p>
+                    <p>
+                        At Medicza, we moved beyond textbooks. Our "Speak First" policy ensured that students spent 70%
+                        of their class time conversing in German. We simulated real-life scenarios—from ordering coffee
+                        in a Berlin café to discussing medical history with a patient.
+                    </p>
+                    <p>
+                        Weekly mock tests replicated the exact environment of the TELC exam, reducing anxiety and
+                        building stamina. By the time January 17th arrived, our students weren't just taking an exam;
+                        they were simply demonstrating what they practiced every day.
+                    </p>
+                </div>
 
-                <h3>A Premier Hub in Coimbatore</h3>
-                <p>
-                    Established in 2020, Medicza International Academy has swiftly risen to become Coimbatore’s most
-                    trusted destination for German language training. Our mission has always been clear: <em>to bridge
-                        the gap between Indian talent and German opportunities.</em>
-                </p>
-                <p>
-                    Unlike standard coaching centers, we focus on holistic development. It's not enough to just know
-                    grammar rules; our students practice real-world conversations, listen to native German podcasts, and
-                    engage in cultural workshops. This ensures they don't just survive in Germany—they thrive.
-                </p>
+                <div id="journey">
+                    <h3>The Journey: From Coimbatore to Chennai</h3>
+                    <p>
+                        Preparation for the TELC exam at Medicza is rigorous. Our B1 and B2 foundation courses are
+                        designed
+                        not just to pass an exam, but to instill deep cultural and linguistic competence.
+                    </p>
+                    <p>
+                        On the morning of January 17, our cohort travelled from Coimbatore to the Chennai TELC Centre,
+                        carrying with them the confidence instilled by our expert trainers. The results speak for
+                        themselves. A 100% commitment from the students met with our structured curriculum has yielded a
+                        phenomenal pass rate.
+                    </p>
+                </div>
 
-                <h3>Why This Exam Matters</h3>
-                <p>
-                    The TELC certification is recognized globally and is a mandatory requirement for work visas
-                    (Ausbildung, Nursing, IT jobs) and university admissions in Germany. Clearing this exam opens the
-                    door to the European Union.
-                </p>
-                <div class="content-list-wrapper">
-                    <p>Our curriculum conquers the four pillars of the TELC format:</p>
+                <div id="why-telc">
+                    <h3>Why This Exam Matters</h3>
+                    <p>
+                        The TELC certification is recognized globally and is a mandatory requirement for work visas
+                        (Ausbildung, Nursing, IT jobs) and university admissions in Germany. Clearing this exam opens
+                        the
+                        door to the European Union.
+                    </p>
+                    <div class="content-list-wrapper">
+                        <p>Our curriculum conquers the four pillars of the TELC format:</p>
+                        <ul class="content-list">
+                            <li><i class="fas fa-check-double"></i> <strong>Hören (Listening):</strong> decoding rapid
+                                native speech.</li>
+                            <li><i class="fas fa-check-double"></i> <strong>Lesen (Reading):</strong> understanding
+                                complex
+                                texts and articles.</li>
+                            <li><i class="fas fa-check-double"></i> <strong>Schreiben (Writing):</strong> drafting
+                                professional emails and essays.</li>
+                            <li><i class="fas fa-check-double"></i> <strong>Sprechen (Speaking):</strong> engaging in
+                                spontaneous discussions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="testimonials" class="testimonials-section">
+                    <h3>Student Voices</h3>
+                    <div class="testimonial-card">
+                        <p class="testi-text">"I never thought I could learn German so fast. The trainers at Medicza
+                            made grammar easy to understand. Clearing TELC B1 is a dream come true!"</p>
+                        <div class="testi-author">
+                            <i class="fas fa-user-circle"></i> Kaviya, Gold Medalist
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testi-text">"The mock exams were a game changer. I felt completely prepared when I
+                            walked into the exam hall in Chennai."</p>
+                        <div class="testi-author">
+                            <i class="fas fa-user-circle"></i> Gautham, Silver Medalist
+                        </div>
+                    </div>
+                </div>
+
+                <div id="conclusion">
+                    <h3>Start Your Own Journey</h3>
+                    <p>
+                        Are you a nurse, a student, or a working professional looking to migrate? The path to Germany
+                        starts
+                        here. We offer courses ranging from <strong>A1 (Beginner)</strong> to <strong>B2
+                            (Professional)</strong>.
+                    </p>
+
+                    <div class="cta-banner-inline">
+                        <div class="cta-text">
+                            <h5>Ready to be the next success story?</h5>
+                            <p>New batches starting soon in Coimbatore.</p>
+                        </div>
+                        <a href="#" class="btn btn-sm">Enquire Now</a>
+                    </div>
+
+                    <h3>Why Join Us?</h3>
+                    <p>
+                        At Medicza, we take pride in being more than just a language institute; we are a career
+                        launchpad. Our immersive training methods have helped hundreds of students clear their exams on
+                        the first attempt, saving both time and money.
+                    </p>
+                    <p>
+                        Joining us means gaining access to:
+                    </p>
                     <ul class="content-list">
-                        <li><i class="fas fa-check-double"></i> <strong>Hören (Listening):</strong> decoding rapid
-                            native speech.</li>
-                        <li><i class="fas fa-check-double"></i> <strong>Lesen (Reading):</strong> understanding complex
-                            texts and articles.</li>
-                        <li><i class="fas fa-check-double"></i> <strong>Schreiben (Writing):</strong> drafting
-                            professional emails and essays.</li>
-                        <li><i class="fas fa-check-double"></i> <strong>Sprechen (Speaking):</strong> engaging in
-                            spontaneous discussions.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Expert Mentorship:</strong> Direct guidance from
+                            trainers who have lived and worked in Germany.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Comprehensive Materials:</strong> Free access to
+                            our extensive library of books, audio, and mock tests.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Community Support:</strong> Join a network of
+                            alumni who are already established in Germany.</li>
                     </ul>
+
+                    <h3>Who Should Join?</h3>
+                    <p>
+                        Our specialized tracks are designed for:
+                    </p>
+                    <ul class="content-list">
+                        <li><i class="fas fa-user-md"></i> <strong>Healthcare Professionals:</strong> Specialized
+                            medical terminology (Pflege) training.</li>
+                        <li><i class="fas fa-university"></i> <strong>Students:</strong> Academic German for university
+                            admission exams.</li>
+                        <li><i class="fas fa-briefcase"></i> <strong>Job Seekers:</strong> Business German for corporate
+                            environments.</li>
+                    </ul>
+
+                    <p class="final-thought">
+                        Congratulations once again to our 29 achievers. We cannot wait to see you excel in Germany!
+                        <br><br>
+                        <em>Danke schön for trusting Medicza.</em>
+                    </p>
                 </div>
-
-                <h3>Start Your Own Journey</h3>
-                <p>
-                    Are you a nurse, a student, or a working professional looking to migrate? The path to Germany starts
-                    here. We offer courses ranging from <strong>A1 (Beginner)</strong> to <strong>B2
-                        (Professional)</strong>.
-                </p>
-
-                <div class="cta-banner-inline">
-                    <div class="cta-text">
-                        <h5>Ready to be the next success story?</h5>
-                        <p>New batches starting soon in Coimbatore.</p>
-                    </div>
-                    <a href="#" class="btn btn-sm">Enquire Now</a>
-                </div>
-
-                <h3>Who Should Join?</h3>
-                <p>
-                    Our programs are tailored for:
-                </p>
-                <ul>
-                    <li><strong>Healthcare Professionals:</strong> Specialized modules for medical terminology.</li>
-                    <li><strong>Students:</strong> Preparation for university entrances.</li>
-                    <li><strong>Job Seekers:</strong> Business German for professionals.</li>
-                </ul>
-
-                <p class="final-thought">
-                    Congratulations once again to our 29 achievers. We cannot wait to see you excel in Germany!
-                    <br><br>
-                    <em>Danke schön for trusting Medicza.</em>
-                </p>
 
             </article>
 
             <!-- Comments / Engagement -->
             <div class="share-section">
+                <div class="like-container">
+                    <button class="like-btn" id="likeBtn">
+                        <i class="far fa-heart"></i>
+                        <span id="likeText">Like</span>
+                        <span class="like-count" id="likeCount">128</span>
+                    </button>
+                </div>
                 <p>Share this success story:</p>
                 <div class="social-icons">
                     <a href="#" class="share-btn twitter"><i class="fab fa-twitter"></i></a>
@@ -211,6 +293,41 @@
                     <a href="#" class="share-btn linkedin"><i class="fab fa-linkedin-in"></i></a>
                     <a href="#" class="share-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
                 </div>
+            </div>
+
+            <!-- Related Posts -->
+            <div class="related-posts">
+                <h3>Read Next</h3>
+                <div class="related-grid">
+                    <a href="#" class="related-card">
+                        <div class="related-img">
+                            <img src="hero-bg.jpg" alt="Moving to Germany Guide">
+                        </div>
+                        <div class="related-content">
+                            <h4>5 Things to Know Before Moving to Germany</h4>
+                            <span class="date">Jan 12, 2026</span>
+                        </div>
+                    </a>
+                    <a href="#" class="related-card">
+                        <div class="related-img">
+                            <img src="kaviya.jpg" alt="Nursing Jobs in Germany - Student Success">
+                        </div>
+                        <div class="related-content">
+                            <h4>Nursing Jobs in Germany: A Complete Guide</h4>
+                            <span class="date">Dec 28, 2025</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter-box">
+                <h4>Stay Updated</h4>
+                <p class="newsletter-sub">Get the latest German learning tips and immigration news.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button type="button" class="btn btn-sm">Subscribe</button>
+                </form>
             </div>
 
         </main>

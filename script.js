@@ -87,4 +87,50 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (scrollTop / docHeight) * 100;
+        const progressBar = document.getElementById('scroll-progress');
+        if (progressBar) {
+            progressBar.style.width = scrolled + '%';
+        }
+    });
+
+    // Like Button Logic
+    const likeBtn = document.getElementById('likeBtn');
+    if (likeBtn) {
+        const likeIcon = likeBtn.querySelector('i');
+        const likeTextSpan = likeBtn.querySelector('#likeText');
+        const likeCountSpan = likeBtn.querySelector('#likeCount');
+
+        let isLiked = false;
+        let count = 128;
+
+        likeBtn.addEventListener('click', () => {
+            isLiked = !isLiked;
+            if (isLiked) {
+                count++;
+                likeBtn.classList.add('liked');
+                likeIcon.classList.remove('far'); // Regular heart
+                likeIcon.classList.add('fas'); // Solid heart
+                likeTextSpan.innerText = 'Liked';
+            } else {
+                count--;
+                likeBtn.classList.remove('liked');
+                likeIcon.classList.remove('fas');
+                likeIcon.classList.add('far');
+                likeTextSpan.innerText = 'Like';
+            }
+            likeCountSpan.innerText = count;
+
+            // Simple animation effect
+            likeBtn.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                likeBtn.style.transform = 'scale(1)';
+            }, 200);
+        });
+    }
 });
